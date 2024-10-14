@@ -1,0 +1,11 @@
+.navbar {
+  display: flex;
+  list-style-type: none;
+  text-decoration: none;
+  justify-content: ;
+}
+.icons {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}

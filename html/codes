@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>K-culture</title>
+    <style>
+      /* 전체 body에 스타일 적용 */
+      body {
+        margin: 0;
+        font-family: sans-serif;
+      }
+
+      /* 네비게이션 스타일 */
+      nav {
+        background-color: #c8e6c9; /* 채도가 낮은 연두색 */
+        text-align: center;
+        padding: 20px;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav li {
+        display: inline-block; /* 메뉴 항목을 수평으로 배치 */
+        margin: 0 10px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #333;
+        padding: 10px 15px;
+        border-radius: 5px;
+      }
+
+      /* **미디어 쿼리 제거** */
+      /* @media (max-width: 768px) {
+      nav ul {
+        text-align: left;
+      }
+      nav li {
+        display: block;
+        margin: 5px 0;
+      }
+    } */
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#k-literature">K-Literature</a></li>
+        <li><a href="#k-pop">K-Pop</a></li>
+        <li><a href="#k-movie">K-Movie</a></li>
+        <li><a href="#k-dance">K-Dance</a></li>
+        <li><a href="#k-landmark">K-Landmark</a></li>
+        <li>로그인</li>
+        <li>회원가입</li>
+      </ul>
+      
+    </nav>
+  </body>
+</html>
