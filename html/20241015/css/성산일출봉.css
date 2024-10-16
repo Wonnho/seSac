@@ -1,0 +1,54 @@
+body {
+  width: 700px;
+  /* height: 700px; */
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+header {
+  height: 32px;
+  background-color: green;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  opacity: 0.5;
+}
+
+main {
+}
+
+main img {
+  margin: 20px 10px 0 10px;
+  width: 680px;
+  /* display: block; */
+}
+
+.title {
+  text-align: center;
+  background-color: green;
+  height: 70px;
+  color: aliceblue;
+  opacity: 0.5;
+
+  margin-top: -21px;
+  margin-bottom: 36px;
+  margin-left: 10px;
+  width: 680px;
+}
+
+footer > span:first-child {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+footer span + hr + span {
+  background-color: antiquewhite;
+}
+
+.foot {
+  width: 700px;
+  height: 44px;
+  margin-top: 20px;
+  background-color: green;
+  opacity: 0.5;
+}
