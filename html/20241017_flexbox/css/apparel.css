@@ -1,0 +1,93 @@
+.header > nav {
+  display: flex;
+  justify-content: center;
+}
+
+.header > nav > ul {
+  display: flex;
+}
+
+.header > nav > ul > li {
+  margin: 0 10px;
+}
+
+.header > img {
+  width: 100vw;
+}
+
+.container {
+  width: 70%;
+  margin: 2rem auto;
+}
+
+.about {
+  display: flex;
+}
+
+
+.about>img {
+  width:40%;
+  display: block;
+  padding: 10px;
+  box-sizing: border-box;
+
+  border-radius: 50px;
+
+}
+
+.about>div>h2 {
+
+  text-align: center;
+margin: 1rem;
+}
+
+
+.about>div {
+  padding: 1rem;
+}
+
+
+
+.about>div>p {
+  line-height: 1.5rem;
+}
+
+
+.contact>div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact>div>img {
+  width: 40%;
+}
+
+.contact-form>input[type=submit]{
+  color: red;
+}
+
+.more>img {
+  width:100px;
+}
+
+.more>ul {
+
+}
+
+
+section-title {
+  margin:1rem;
+
+}
+
+
+.more-info {
+  display:flex;
+  justify-content: center;
+  text-align: center;
+}

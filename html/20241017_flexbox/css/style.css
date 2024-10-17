@@ -1,0 +1,23 @@
+/* .navbar {
+  display: flex;
+  list-style-type: none;
+  text-decoration: none;
+  justify-content: center;
+} */
+
+.header-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header-right {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.icons {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
