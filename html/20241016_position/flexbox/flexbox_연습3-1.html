@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+
       .big-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: center; /* Centers content vertically */
         align-items: center;
+        height: 100vh; /* Full viewport height */
       }
 
       .container {
@@ -25,15 +31,10 @@
         padding-left: 15px;
         padding-top: 15px;
       }
-
-      /* .item:nth-child(2) {
-        margin-left: auto; /* Pushes the second item to the right 
-    } */
     </style>
   </head>
   <body>
     <div class="big-container">
-      `
       <div class="container">
         <div class="item">flexbox</div>
         <div class="item">flexbox</div>
