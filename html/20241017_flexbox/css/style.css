@@ -1,10 +1,13 @@
-/* .navbar {
+.navbar {
   display: flex;
-  list-style-type: none;
-  text-decoration: none;
-  justify-content: center;
-} */
+  /* list-style-type: none; */
+  /* text-decoration: none; */
+  justify-content: space-between;
+}
 
+a {
+  text-decoration: none;
+}
 .header-left {
   display: flex;
   justify-content: flex-start;
@@ -13,11 +16,79 @@
 .header-right {
   display: flex;
   justify-content: space-between;
+  list-style-type: none;
 }
 
+.header-right > li {
+  margin: 10px;
+}
+
+nav > img {
+  width: 100vw;
+}
+
+.land {
+  display: flex;
+  margin-left: 200px;
+}
+
+.land h3 {
+  text-align: center;
+}
+
+.land p {
+  padding: 0 200px;
+}
+
+.land img {
+  display: block;
+  border-radius: 40px;
+  width: 40%;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.contact h3 {
+  text-align: center;
+}
+
+.contact-us {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.email-form {
+  border: 1px solid black;
+  padding: 12px;
+}
+.email-form > div,
+input {
+  margin-bottom: 12px;
+}
+
+.email-form .btn {
+  display: block;
+  margin: auto;
+}
+
+.footer h3 {
+  text-align: center;
+  font-weight: 900;
+}
 
 .icons {
   display: flex;
   list-style-type: none;
   justify-content: space-around;
+  align-items: center;
+}
+
+.icons li div:first-child {
+  margin: auto;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
