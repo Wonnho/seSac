@@ -9,7 +9,7 @@ if(nowTime>=9 && nowTime<=18) {
   isWorkingHour=true
 } 
    else {
-    isWorkingHour=fails;
+    isWorkingHour='fails';
    } 
 
   if(isWeekend) {
