@@ -11,7 +11,7 @@ let result;
 let sum;
 
 result = [];
-for (let j = 0; j < 0; j++) {
+for (let j = 0; j < m; j++) {
   sum = 0;
   for (let i = 0; i < n; i++) {
     sum += nums[i][j];

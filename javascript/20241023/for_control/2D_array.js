@@ -22,7 +22,7 @@ for (let i in nums) {
   }
 }
 
-const n = nums.length;
+
 const m = nums[0].length;
 for (let k = 0; k < n; k++) {
   for (let j = 0; j < m; j++) {
