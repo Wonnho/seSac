@@ -13,7 +13,7 @@ console.log('check if arr is influenced or not: ', arr);
 
 
 console.log(1||2)//1
-console.log(0||3) //0
+console.log(0||3) //3
 console.log(3||2) //3
 
 console.log(1&&2)  //2

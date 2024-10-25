@@ -5,3 +5,9 @@ const mulNums = nums.reduce((acc, cur) => {
 }, 1);
 
 console.log(mulNums);
+
+const reduce_result = nums.reduce((acc, el) => {
+  return acc + el;
+}, 0);
+
+console.log('reduce result:', reduce_result);
