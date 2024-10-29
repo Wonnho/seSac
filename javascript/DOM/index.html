@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>DOM manipulation</h1>
+    <div class="container">
+      <p id="first">manipulation</p>
+      <p class="second">DOM</p>
+    </div>
+    <script>
+      // 문단 출력
+      const firstParagraph = document.querySelector('#first');
+      console.log(firstParagraph.textContent);
+      const secondParagraph = document.querySelector('.second');
+      console.log(secondParagraph.textContent);
+      // 모든 문단 출력
+      const paragraphs = document.querySelectorAll('p');
+      paragraphs.forEach((p, index) => {
+        console.log(`paragraph ${index + 1}:${p.textContent}`);
+        // 텍스트 조작
+        const heading = document.querySelector('h1');
+        heading.textContent = '문서 객체 모델';
+        console.log(heading.textContent);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="https://www.example.com" id="link">Example website</a>
+    <script>
+      const link = document.querySelector('#link');
+      //read attribute
+      console.log(link.getAttribute('href'));
+
+      //wirte attribute
+      link.setAttribute('href', 'https://www.themoviedb.org');
+      console.log(link.getAttribute('href'));
+
+      // access attribute
+      console.log(link.href);
+
+      link.href = '/data.go.kr';
+      console.log(link.href);
+
+      // manipulate and access id
+      link.id = 'new-link';
+      console.log(link.id);
+    </script>
+  </body>
+</html>
