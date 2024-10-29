@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .font {
+        font-size: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="https://images.dog.ceo/breeds/terrier-border/n02093754_4582.jpg"
+      alt="강아지 사진"
+    />
+    <!-- 
+      다음 api를 참고하여 img태그에 강아지 사진을 넣어주세요.
+      https://dog.ceo/dog-api/ 
+    -->
+    <script>
+      const URL = 'https://dog.ceo/api/breeds/image/random';
+      async function main() {
+        const response = await fetch(URL);
+        const data = await response.json();
+
+        const imgUrl = data.message;
+        const imgTag = document.querySelector('img');
+        imgTag.src = imgUrl;
+      }
+      main();
+      setInterval(main, 1000);
+    </script>
+  </body>
+</html>

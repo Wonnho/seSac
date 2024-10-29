@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .font {
+        font-size: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 글씨를 "hello dom"으로 변경하시오 -->
+    <div id="text">Hello World!</div>
+
+    <!-- background-color를 red로, height, width를 100px로 변경하시오 -->
+    <div id="box">Hello World!</div>
+
+    <!-- 글씨 크기를 3rem으로 바꾸시오 -->
+    <div id="size">글씨</div>
+
+    <!-- li태그들의 font 크기를 3rem으로 바꾸시오 -->
+    <ul>
+      <li class="list">hello</li>
+      <li class="list">world</li>
+      <li class="list">css</li>
+      <li class="list">javascript</li>
+    </ul>
+    <script>
+      // 1
+      const textChange = document.querySelector('#text');
+      textChange.textContent = 'Hello DOM';
+
+      // 2
+      const styleChange = document.querySelector('#box');
+      // styleChange.style.backgroundColor = 'red';
+      // styleChange.style.width='100px';
+      // styleChange.style.height='100px';
+
+      //not working because....
+      // styleChange.style = {
+      //   backgroundColor: 'violet',
+      //   width: '100px',
+      //   height: '100px',
+      // };
+
+      const styleObject = {
+        backgroundColor: 'violet',
+        width: '100px',
+        height: '100px',
+      };
+
+      for (let el in styleObject) {
+        const value = styleObject[el];
+        styleChange.style[el] = value;
+      }
+
+      //  3
+
+      const textSizeChange = document.querySelector('#size');
+      textSizeChange.classList.add('font');
+
+      // 4
+
+      const listFontsizeAll = document.querySelectorAll('.list');
+      console.log(listFontsizeAll);
+      listFontsizeAll.forEach((listFont) => {
+        listFont.classList.add('font');
+      });
+    </script>
+  </body>
+</html>
