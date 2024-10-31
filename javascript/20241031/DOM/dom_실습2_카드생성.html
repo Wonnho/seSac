@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .card {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin: 10px;
+        width: 200px;
+      }
+
+      .card-title {
+        font-weight: bold;
+      }
+
+      .card-body {
+        color: #666;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 아래 데이터를 사용해서 container 안에 카드 형태의 요소들을 생성하세요 -->
+    <div id="cardContainer"></div>
+
+    <script>
+      const cards = [
+        { title: '카드1', content: '내용1', color: '#ffeeee' },
+        { title: '카드2', content: '내용2', color: '#eeffee' },
+        { title: '카드3', content: '내용2', color: '#eeeeff' },
+      ];
+
+      const carData = cards[0];
+      const { title, content, color } = cardDAta;
+
+      //카드 만들기
+      const cardTag = document.createElement('div');
+      cardTag.classList.add('card'); // 이건 뭔가?? div tag에 calss name을 주는 거다.
+      cardTag.style.backgroundColor = color;
+
+      //
+      const CardTitleTag = document.createElement('div');
+      CardTitleTag.classList.add('card-title');
+      CardTitleTag.textContent = title;
+
+      const CardBodyTag = document.createElement('div');
+      CardBodyTag.classList.add('card-title');
+      CardBodyTag.textContent = content;
+
+
+      cardTag.append(car                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               )
+    </script>
+
+  </body>
+</html>

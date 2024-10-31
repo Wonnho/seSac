@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .card {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin: 10px;
+        width: 200px;
+      }
+
+      .card-title {
+        font-weight: bold;
+      }
+
+      .card-body {
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Services 항목을 추가하시오. -->
+    <ul id="menu">
+      <li>Home</li>
+      <li>About</li>
+    </ul>
+    <script>
+      const liTag = document.createElement('li');
+      liTag.textContent = 'Service';
+      const menuTag = document.querySelector('#menu');
+      menuTag.append(liTag);
+    </script>
+
+    <!-- 아래 배열의 각 항목을 메뉴에 추가하세요 -->
+    <ul id="menu-2">
+      <li>Home</li>
+      <li>About</li>
+    </ul>
+    <script>
+      const newItems = ['Services', 'Products', 'Contact'];
+      const menuTag2 = document.querySelector('#menu-2');
+      
+      newItems.forEach((item) => {
+        const newMenuTag = document.createElement('li');
+        newMenuTag.textContent = item;
+        menuTag2.append(newMenuTag);
+      });
+    </script>
+
+    <!-- 아래 데이터를 사용해서 container 안에 카드 형태의 요소들을 생성하세요 -->
+    <div id="cardContainer"></div>
+    <script>
+      const cards = [
+        { title: '카드1', content: '내용1', color: '#ffeeee' },
+        { title: '카드2', content: '내용2', color: '#eeffee' },
+        { title: '카드3', content: '내용2', color: '#eeeeff' },
+      ];
+
+      const container = document.querySelector('#cardContainer');
+      
+      cards.forEach(card => {
+        // 카드 요소 생성
+        const cardDiv = document.createElement('div');
+        cardDiv.className = 'card';
+        cardDiv.style.backgroundColor = card.color;
+
+        // 제목 요소 생성
+        const titleDiv = document.createElement('div');
+        titleDiv.className = 'card-title';
+        titleDiv.textContent = card.title;
+
+        // 내용 요소 생성
+        const bodyDiv = document.createElement('div');
+        bodyDiv.className = 'card-body';
+        bodyDiv.textContent = card.content;
+
+        // 요소들을 조합
+        cardDiv.appendChild(titleDiv);
+        cardDiv.appendChild(bodyDiv);
+        container.appendChild(cardDiv);
+      });
+    </script>
+  </body>
+</html>
