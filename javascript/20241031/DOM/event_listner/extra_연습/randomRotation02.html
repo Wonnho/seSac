@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 50%;
+        margin: 20px auto;
+      }
+
+      td {
+        border: 1px solid #000;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="table"></div>
+    <script>
+      const names = [
+        '이태영',
+        '박재훈',
+        '임유진',
+        '차윤선',
+        '서승덕',
+        '육슬찬',
+        '윤대정',
+        '오예진',
+        '정여원',
+        '정승연',
+        '이상호',
+        '임수빈',
+        '정명훈',
+        '이재현',
+        '박하은',
+        '김동훈',
+        '가경식',
+        '강경훈',
+        '최원호',
+        '노영재',
+        '박종빈',
+        '김상호',
+        '원성준',
+      ];
+
+      const nameTable = document.querySelector('#table');
+      nameTable.addEventListener('click', () => {
+        //initialize table
+        nameTable.innerHTML = '';
+        const table = document.createElement('table');
+        const tbody = document.createElement('tbody');
+
+        let randomNum = _.random(1, names.length - 1);
+
+        for (let k = 0; k < 4; k++) {
+          const row = document.createElement('tr');
+          for (let j = 0; j < 7; j++) {
+            const col = document.createElement('td');
+            col.textContent = names[randomNum];
+            row.appendChild(col);
+          }
+          tbody.appendChild(row);
+        }
+
+        table.appendChild(tbody);
+        nameTable.appendChild(table);
+        //  names.forEach((name)=>{
+        //   const row=document.createElement('tr')
+
+        //  })
+      });
+    </script>
+  </body>
+</html>
