@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="parent">
+      부모 div
+      <button id="child">자식 button</button>
+    </div>
+
+    <script>
+      // 부모 요소에 이벤트 핸들러 등록
+      document.querySelector('#parent').addEventListener('click', function () {
+        alert('부모 div 클릭');
+      });
+
+      // 자식 요소에 이벤트 핸들러 등록
+      document.querySelector('#child').addEventListener('click', function () {
+        alert('자식 button 클릭');
+        event.stopPropagation();
+      });
+    </script>
+  </body>
+</html>

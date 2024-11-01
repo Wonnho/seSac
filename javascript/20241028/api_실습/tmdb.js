@@ -62,13 +62,43 @@ async function getHighRating() {
 
 getHighRating();
 
-
 // maximal average rating out of movies playing now via reduce
 //plus movie name having maximal average rating
 
 async function getVoteAvg() {
-
   try {
-    const baseURL='https://api.themoviedb.org/3/movie'
+    const baseURL = 'https://api.themoviedb.org/3/movie';
+    const path = '/now_playing';
+    const params = new URLSearchParams({
+      api_key: '3aad8aaf513a9fc4cde034d9a494417',
+      language: 'ko',
+    });
+    const URL = `${baseURL}${path}?${params}`;
+
+    const response = await fetch(URL);
+    const data = await response.json();
+    console.log(data);
+    const movies = data.results;
+
+    let maxVoteMovie = null;
+    //let maxVoteAverage = 0;
+
+    const maxRatingMovie = movies.reduce((acc, cur) => {
+      const accVoteAverage = acc.vote_average;
+      const curVoteAverage = cur.vote_average;
+      if (accVoteAverage > curVoteAverage) {
+        return acc;
+      } else if (accVoteAverage < curVoteAverage) {
+        return cur;
+      } else {
+        const accVoteAverage = acc.vote_count;
+        const curVoteAverage = cur.vote_count;
+      }
+    });
+    console.log(maxVoteMovie.title);
+  } catch (error) {
+    console.error('Error', error);
   }
 }
+
+getVoteAvg();
